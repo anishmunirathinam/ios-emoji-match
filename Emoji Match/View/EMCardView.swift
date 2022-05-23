@@ -37,6 +37,8 @@ internal struct EMCardView_Previews: PreviewProvider {
         EMCardView(card: EMGameViewModel.EMCard(content: "❤️",
                                                 id: 1000,
                                                 isFlipped: false,
-                                                isMatched: false)).padding()
+                                                isMatched: false))
+        .padding()
+        .foregroundColor(.blue)
     }
 }
