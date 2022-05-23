@@ -17,7 +17,15 @@ struct EMGameModel<EMCardContent: Equatable> {
     }
 
     private(set) var cards: [EMCard]
-    private var initialFlippedCardIndex: Int?
+    private var initialFlippedCardIndex: Int? {
+        get {
+            cards.indices.filter({ cards[$0].isFlipped }).oneAndOnly
+        } set {
+            cards.indices.forEach {
+                cards[$0].isFlipped = ($0 == newValue)
+            }
+        }
+    }
 
     init(pairs: Int, content: (Int) -> EMCardContent) {
         cards = [EMCard]()
@@ -37,14 +45,20 @@ struct EMGameModel<EMCardContent: Equatable> {
                     cards[chosenIndex].isMatched = true
                     cards[matchIndex].isMatched = true
                 }
-                initialFlippedCardIndex = nil
+                cards[chosenIndex].isFlipped = true
             } else {
-                cards.indices.forEach {
-                    cards[$0].isFlipped = false
-                }
                 initialFlippedCardIndex = chosenIndex
             }
-            cards[chosenIndex].isFlipped.toggle()
         }
+    }
+}
+
+fileprivate extension Array {
+
+    var oneAndOnly: Element? {
+        if count == 1 {
+            return first
+        }
+        return nil
     }
 }
