@@ -34,6 +34,9 @@ struct EMGameView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EMGameView()
+        let game = EMGameViewModel()
+        game.choose(game.cards.first!)
+        return EMGameView(game: game)
+            .preferredColorScheme(.dark)
     }
 }

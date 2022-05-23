@@ -11,7 +11,8 @@ import SwiftUI
 struct Emoji_MatchApp: App {
     var body: some Scene {
         WindowGroup {
-            EMGameView()
+            let game = EMGameViewModel()
+            EMGameView(game: game)
         }
     }
 }
