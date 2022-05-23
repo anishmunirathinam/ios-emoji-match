@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EMGameView: View {
 
-    let game = EMGameViewModel()
+    @ObservedObject var game = EMGameViewModel()
     
     var body: some View {
         ScrollView {

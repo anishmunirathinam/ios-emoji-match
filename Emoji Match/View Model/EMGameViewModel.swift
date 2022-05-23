@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EMGameViewModel {
+class EMGameViewModel: ObservableObject {
 
     typealias EMCard = EMGameModel<String>.EMCard
     static let content = ["❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎"]
@@ -18,13 +18,13 @@ class EMGameViewModel {
         }
     }
 
-    private var model: EMGameModel = createModel()
+    @Published private var model: EMGameModel = createModel()
 
     var cards: [EMCard] {
         model.cards
     }
 
     func choose(_ card: EMCard) {
-        // TODO: Handle choosing and matching cards
+        model.choose(card)
     }
 }
