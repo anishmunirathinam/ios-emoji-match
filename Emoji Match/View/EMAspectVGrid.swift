@@ -13,6 +13,12 @@ struct EMAspectVGrid<EMItem: Identifiable, EMItemView: View>: View {
     let aspectRatio: CGFloat
     let content: (EMItem) -> EMItemView
 
+    init(items: [EMItem], aspectRatio: CGFloat, @ViewBuilder content: @escaping (EMItem) -> EMItemView) {
+        self.items = items
+        self.aspectRatio = aspectRatio
+        self.content = content
+    }
+
     var body: some View {
         GeometryReader { geometry in
             VStack {

@@ -13,13 +13,22 @@ struct EMGameView: View {
     
     var body: some View {
         EMAspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+            show(card)
+        }
+        .foregroundColor(.red)
+    }
+
+    @ViewBuilder
+    private func show(_ card: EMGameViewModel.EMCard) -> some View {
+        if card.isMatched && !card.isFlipped {
+            Rectangle().opacity(0.0)
+        } else {
             EMCardView(card: card)
                 .padding(4)
                 .onTapGesture {
                     game.choose(card)
                 }
         }
-        .foregroundColor(.red)
     }
 }
 
