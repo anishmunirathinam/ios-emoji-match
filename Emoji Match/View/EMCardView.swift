@@ -14,17 +14,11 @@ internal struct EMCardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                let cardShape = RoundedRectangle(cornerRadius: EMCardViewConstants.kCornerRadius)
-                if card.isFlipped {
-                    cardShape.fill().foregroundColor(.white)
-                    cardShape.strokeBorder(lineWidth: EMCardViewConstants.kLineWidth)
-                    EMPie(startAngle: Angle(degrees: 0-90), endAngel: Angle(degrees: 30-90))
-                        .opacity(0.5)
-                    Text(card.content).font(scaledFont(for: geometry.size))
-                } else {
-                    cardShape.fill()
-                }
+                EMPie(startAngle: Angle(degrees: 0-90), endAngel: Angle(degrees: 30-90))
+                    .opacity(0.5)
+                Text(card.content).font(scaledFont(for: geometry.size))
             }
+            .cardify(isFlipped: card.isFlipped)
         }
     }
 

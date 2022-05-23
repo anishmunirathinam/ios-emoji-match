@@ -16,6 +16,7 @@
 		F9D678B4283B55B90018C35F /* EMGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B3283B55B90018C35F /* EMGameViewModel.swift */; };
 		F9D678B6283B5C860018C35F /* EMAspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B5283B5C860018C35F /* EMAspectVGrid.swift */; };
 		F9D678B8283B68A10018C35F /* EMPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B7283B68A10018C35F /* EMPie.swift */; };
+		F9D678BA283B72A70018C35F /* EMCardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B9283B72A70018C35F /* EMCardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F9D678B3283B55B90018C35F /* EMGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMGameViewModel.swift; sourceTree = "<group>"; };
 		F9D678B5283B5C860018C35F /* EMAspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMAspectVGrid.swift; sourceTree = "<group>"; };
 		F9D678B7283B68A10018C35F /* EMPie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMPie.swift; sourceTree = "<group>"; };
+		F9D678B9283B72A70018C35F /* EMCardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMCardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				F9D6789F283A63480018C35F /* EMGameView.swift */,
 				F9D678AC283A65B50018C35F /* EMCardView.swift */,
 				F9D678B7283B68A10018C35F /* EMPie.swift */,
+				F9D678B9283B72A70018C35F /* EMCardify.swift */,
 				F9D678B5283B5C860018C35F /* EMAspectVGrid.swift */,
 			);
 			path = View;
@@ -190,6 +193,7 @@
 				F9D6789E283A63480018C35F /* Emoji_MatchApp.swift in Sources */,
 				F9D678B8283B68A10018C35F /* EMPie.swift in Sources */,
 				F9D678AD283A65B50018C35F /* EMCardView.swift in Sources */,
+				F9D678BA283B72A70018C35F /* EMCardify.swift in Sources */,
 				F9D678B4283B55B90018C35F /* EMGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
