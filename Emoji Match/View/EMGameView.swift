@@ -9,17 +9,21 @@ import SwiftUI
 
 struct EMGameView: View {
 
-    let emojis = ["❤️", "💚", "💙", "🖤"]
+    let game = EMGameViewModel()
     
     var body: some View {
-        VStack {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100.0))]) {
-                ForEach(emojis[0..<emojis.count], id: \.self) {
-                    EMCardView(content: $0)
-                        .aspectRatio(2/3, contentMode: .fit)
+        ScrollView {
+            VStack {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100.0))]) {
+                    ForEach(game.cards) { card in
+                        EMCardView(card: card)
+                            .aspectRatio(2/3, contentMode: .fit)
+                            .onTapGesture {
+                                game.choose(card)
+                            }
+                    }
                 }
             }
-            Spacer()
         }
         .padding(.horizontal)
     }
