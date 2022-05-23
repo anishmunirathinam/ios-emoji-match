@@ -9,22 +9,18 @@ import SwiftUI
 
 internal struct EMCardView: View {
 
-    @State var isFlipped = false
-    var content: String
-    
+    let card: EMGameViewModel.EMCard
+
     var body: some View {
         ZStack {
             let cardShape = RoundedRectangle(cornerRadius: EMCardViewConstants.kCornerRadius)
-            if isFlipped {
+            if card.isFlipped {
                 cardShape.fill().foregroundColor(.white)
                 cardShape.strokeBorder(lineWidth: EMCardViewConstants.kLineWidth)
-                Text(content).font(.largeTitle)
+                Text(card.content).font(.largeTitle)
             } else {
                 cardShape.fill()
             }
-        }
-        .onTapGesture {
-            isFlipped = !isFlipped
         }
     }
 }
@@ -38,6 +34,9 @@ fileprivate struct EMCardViewConstants {
 internal struct EMCardView_Previews: PreviewProvider {
 
     static var previews: some View {
-        EMCardView(content: "🤎").padding()
+        EMCardView(card: EMGameViewModel.EMCard(content: "❤️",
+                                                id: 1000,
+                                                isFlipped: false,
+                                                isMatched: false)).padding()
     }
 }

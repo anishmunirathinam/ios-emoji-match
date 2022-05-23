@@ -12,6 +12,8 @@
 		F9D678A2283A634A0018C35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D678A1283A634A0018C35F /* Assets.xcassets */; };
 		F9D678A5283A634A0018C35F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D678A4283A634A0018C35F /* Preview Assets.xcassets */; };
 		F9D678AD283A65B50018C35F /* EMCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678AC283A65B50018C35F /* EMCardView.swift */; };
+		F9D678B2283B54A20018C35F /* EMGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B1283B54A20018C35F /* EMGameModel.swift */; };
+		F9D678B4283B55B90018C35F /* EMGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B3283B55B90018C35F /* EMGameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		F9D678A1283A634A0018C35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D678A4283A634A0018C35F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9D678AC283A65B50018C35F /* EMCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMCardView.swift; sourceTree = "<group>"; };
+		F9D678B1283B54A20018C35F /* EMGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMGameModel.swift; sourceTree = "<group>"; };
+		F9D678B3283B55B90018C35F /* EMGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMGameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				F9D678AB283A65900018C35F /* App */,
+				F9D678AF283B54750018C35F /* Model */,
 				F9D678AE283A65BE0018C35F /* View */,
+				F9D678B0283B54820018C35F /* View Model */,
 				F9D678A1283A634A0018C35F /* Assets.xcassets */,
 				F9D678A3283A634A0018C35F /* Preview Content */,
 			);
@@ -84,6 +90,22 @@
 				F9D678AC283A65B50018C35F /* EMCardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F9D678AF283B54750018C35F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9D678B1283B54A20018C35F /* EMGameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9D678B0283B54820018C35F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9D678B3283B55B90018C35F /* EMGameViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D678A0283A63480018C35F /* EMGameView.swift in Sources */,
+				F9D678B2283B54A20018C35F /* EMGameModel.swift in Sources */,
 				F9D6789E283A63480018C35F /* Emoji_MatchApp.swift in Sources */,
 				F9D678AD283A65B50018C35F /* EMCardView.swift in Sources */,
+				F9D678B4283B55B90018C35F /* EMGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
