@@ -14,6 +14,7 @@
 		F9D678AD283A65B50018C35F /* EMCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678AC283A65B50018C35F /* EMCardView.swift */; };
 		F9D678B2283B54A20018C35F /* EMGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B1283B54A20018C35F /* EMGameModel.swift */; };
 		F9D678B4283B55B90018C35F /* EMGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B3283B55B90018C35F /* EMGameViewModel.swift */; };
+		F9D678B6283B5C860018C35F /* EMAspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D678B5283B5C860018C35F /* EMAspectVGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		F9D678AC283A65B50018C35F /* EMCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMCardView.swift; sourceTree = "<group>"; };
 		F9D678B1283B54A20018C35F /* EMGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMGameModel.swift; sourceTree = "<group>"; };
 		F9D678B3283B55B90018C35F /* EMGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMGameViewModel.swift; sourceTree = "<group>"; };
+		F9D678B5283B5C860018C35F /* EMAspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMAspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				F9D6789F283A63480018C35F /* EMGameView.swift */,
 				F9D678AC283A65B50018C35F /* EMCardView.swift */,
+				F9D678B5283B5C860018C35F /* EMAspectVGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				F9D678A0283A63480018C35F /* EMGameView.swift in Sources */,
 				F9D678B2283B54A20018C35F /* EMGameModel.swift in Sources */,
+				F9D678B6283B5C860018C35F /* EMAspectVGrid.swift in Sources */,
 				F9D6789E283A63480018C35F /* Emoji_MatchApp.swift in Sources */,
 				F9D678AD283A65B50018C35F /* EMCardView.swift in Sources */,
 				F9D678B4283B55B90018C35F /* EMGameViewModel.swift in Sources */,

@@ -12,20 +12,23 @@ struct EMGameView: View {
     @ObservedObject var game = EMGameViewModel()
     
     var body: some View {
-        ScrollView {
-            VStack {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100.0))]) {
-                    ForEach(game.cards) { card in
-                        EMCardView(card: card)
-                            .aspectRatio(2/3, contentMode: .fit)
-                            .onTapGesture {
-                                game.choose(card)
-                            }
-                    }
-                }
-            }
+        EMAspectVGrid(items: game.cards, aspectRatio: 2/3) { card in
+            show(card)
         }
-        .padding(.horizontal)
+        .foregroundColor(.red)
+    }
+
+    @ViewBuilder
+    private func show(_ card: EMGameViewModel.EMCard) -> some View {
+        if card.isMatched && !card.isFlipped {
+            Rectangle().opacity(0.0)
+        } else {
+            EMCardView(card: card)
+                .padding(4)
+                .onTapGesture {
+                    game.choose(card)
+                }
+        }
     }
 }
 
